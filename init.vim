@@ -1,6 +1,7 @@
 :" Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
+"   This is to verify shell script
 call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
