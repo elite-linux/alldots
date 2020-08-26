@@ -1,9 +1,9 @@
-:" Specify a directory for plugins
+" Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
 "   This is to verify shell script
 call plug#begin('~/.vim/plugged')
-
+   
 " Make sure you use single quotes
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
@@ -41,6 +41,7 @@ map ii <ESC> :w<CR>
 imap ii <ESC> :w<CR>
 map <silent> <C-n> :NERDTreeToggle<CR>
 imap jj <ESC> :w !python3 % <CR>
+imap ,, <C-[>
 set noswapfile
 set hidden
 set guifont=DroidSansMono\ Nerd\ Font\ 11
@@ -86,7 +87,6 @@ nnoremap <leader>t :FloatermNew<CR>
 "nnoremap <leader>t :FloatermNew --height=0.9 --width=0.7 --wintype=floating --name=floaterm1 --position=topright --autoclose=1 cd dark-crawler && bash dark-crawler.sh<CR>
 nnoremap <leader>r :FloatermNew --height=0.7 --width=0.7 --wintype=floating --name=floaterm2 --position=topright --autoclose=2 ranger<CR>
 nnoremap <leader>m :Marks<CR>
-imap <leader>,<esc>
 
 
 " Border color
