@@ -3,7 +3,7 @@
 " - Avoid using standard Vim directory names like 'plugin'
 "   This is to verify shell script
 call plug#begin('~/.vim/plugged')
-   
+
 " Make sure you use single quotes
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
@@ -23,7 +23,7 @@ Plug 'morhetz/gruvbox'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'w0rp/ale'
-
+Plug 'Yggdroot/indentLine'
 " Using a non-master branch
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'zxqfl/tabnine-vim'
@@ -68,6 +68,8 @@ let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 let g:NERDTreeHijackNetrw = 0
 let g:ranger_replace_netrw = 1
+set list listchars+=trail:¬
+let g:indentLine_chars = '┆'
 "This is the default extra key bindings
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',

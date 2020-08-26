@@ -10,7 +10,7 @@ cp "$HOME/.config/compton.conf" "$MAINDIR"
 cp "$HOME/.config/nvim/init.vim" "$MAINDIR"
 
 
-cd "$MAINDIR" || echo "Cannot change directory..." 
+cd "$MAINDIR" || echo "Cannot change directory..."
 echo "$PWD"
 git add .
 git commit -m "from shellscript $DATE:"
