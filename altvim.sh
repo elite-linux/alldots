@@ -5,9 +5,9 @@
 
 MAINDIR="$HOME/alldotfiles/"
 DATE=$(date):
-cp /home/hackuin/.config/i3/config "$MAINDIR"
-cp /home/hackuin/.config/compton.conf "$MAINDIR"
-cp /home/hackuin/.config/nvim/init.vim "$MAINDIR"
+cp "$HOME/.config/i3/config" "$MAINDIR"
+cp "$HOME/.config/compton.conf" "$MAINDIR"
+cp "$HOME/.config/nvim/init.vim" "$MAINDIR"
 
 
 cd "$MAINDIR" || echo "Cannot change directory..." 
