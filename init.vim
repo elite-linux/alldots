@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
+Plug 'tpope/vim-surround'
 Plug 'mhinz/vim-startify'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'airblade/vim-rooter'
@@ -42,6 +43,7 @@ imap ii <ESC> :w<CR>
 map <silent> <C-n> :NERDTreeToggle<CR>
 imap jj <ESC> :w !python3 % <CR>
 imap ,, <C-[>
+imap <C-f> <ESC> <ESC> :BLines! <CR>
 set noswapfile
 set hidden
 set guifont=DroidSansMono\ Nerd\ Font\ 11
@@ -92,7 +94,7 @@ nnoremap <leader>m :Marks<CR>
 
 
 " Border color
-let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffset':0.5,'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp' } }
+let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.7, 'height': 0.7,'yoffset':0.5,'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp' } }
 
 let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
 let $FZF_DEFAULT_COMMAND="rg --files --hidden"
