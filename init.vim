@@ -79,14 +79,14 @@ let g:fzf_action = {
 " explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
-map <C-f> :Files<CR>
+map <C-f> :Files ~/<CR>
 map <leader>b :Buffers<CR>
 nnoremap <leader>g :Rg<CR>
 nnoremap <leader>t :FloatermNew<CR>
 "nnoremap <leader>t :FloatermNew --height=0.9 --width=0.7 --wintype=floating --name=floaterm1 --position=topright --autoclose=1 cd dark-crawler && bash dark-crawler.sh<CR>
 nnoremap <leader>r :FloatermNew --height=0.7 --width=0.7 --wintype=floating --name=floaterm2 --position=topright --autoclose=2 ranger<CR>
 nnoremap <leader>m :Marks<CR>
-imap <leader>, :<esc>
+imap <leader>,<esc>
 
 
 " Border color
