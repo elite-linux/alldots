@@ -1,4 +1,4 @@
-" Specify a directory for plugins
+:" Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
@@ -7,6 +7,8 @@ call plug#begin('~/.vim/plugged')
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
+Plug 'mhinz/vim-startify'
+Plug 'francoiscabrol/ranger.vim'
 Plug 'airblade/vim-rooter'
 
 " On-demand loading
@@ -62,7 +64,9 @@ let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
-" This is the default extra key bindings
+let g:NERDTreeHijackNetrw = 0
+let g:ranger_replace_netrw = 1
+"This is the default extra key bindings
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-x': 'split',
@@ -77,9 +81,11 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 map <C-f> :Files<CR>
 map <leader>b :Buffers<CR>
 nnoremap <leader>g :Rg<CR>
-nnoremap <leader>, :FloatermNew<CR>
-nnoremap <leader>t :FloatermNew --height=0.9 --width=0.7 --wintype=floating --name=floaterm1 --position=topright --autoclose=1 cd dark-crawler && bash dark-crawler.sh<CR>
+nnoremap <leader>t :FloatermNew<CR>
+"nnoremap <leader>t :FloatermNew --height=0.9 --width=0.7 --wintype=floating --name=floaterm1 --position=topright --autoclose=1 cd dark-crawler && bash dark-crawler.sh<CR>
+nnoremap <leader>r :FloatermNew --height=0.7 --width=0.7 --wintype=floating --name=floaterm2 --position=topright --autoclose=2 ranger<CR>
 nnoremap <leader>m :Marks<CR>
+imap <leader>, :<esc>
 
 
 " Border color
