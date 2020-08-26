@@ -3,7 +3,7 @@
 # for all my dot files.
 
 
-MAINDIR='/home/hackuin/alldotfiles/'
+MAINDIR="$HOME/alldotfiles/"
 DATE=$(date):
 cp /home/hackuin/.config/i3/config "$MAINDIR"
 cp /home/hackuin/.config/compton.conf "$MAINDIR"
