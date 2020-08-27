@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Monaco for powerline 7
+font pango:Consolas 7
 
 hide_edge_borders both
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -41,8 +41,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 for_window [class="konsole"] floating enable
-for_window [class="konsole"] floating"] [floating] resize set 600 500 
-bindsym $mod+Control+t exec konsole 
+for_window [class="konsole"] floating"] [floating] resize set 600 500
+bindsym $mod+Control+t exec konsole
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
@@ -50,7 +50,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+z exec i3-sensible-terminal -e ranger
 # start dmenu (a program launcher)
 # # bindsym $mod+d exec dmenu_run -i -p 'Kali Linux' -fn 'Monaco:bold:pixelsize=11' -nb '#313134' -nf '#ffffff' -sf '#ffffff'
-bindsym $mod+d exec rofi -combi-modi -show drun -theme Monokai -font "Noto Sans Mono 9"  
+bindsym $mod+d exec rofi -combi-modi -show drun -theme Monokai -font "Noto Sans Mono 9"
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -109,14 +109,19 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1: Terms "
+# set $ws1 "1: Terms "
 
 
-set $ws2 "2: Browser "
+# set $ws2 "2: Browser "
 
-set $ws3 "3: Dark-web "
-set $ws4 "4 Music "
-set $ws5 "5 Channels "
+# set $ws3 "3: Dark-web "
+# set $ws4 "4 Music "
+# set $ws5 "5 Channels "
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -160,28 +165,28 @@ bindsym $mod+b "exec firefox"
 bindsym $mod+t "exec thunar"
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+# These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+# Pressing left will shrink the window’s width.
+# Pressing right will grow the window’s width.
+# Pressing up will shrink the window’s height.
+# Pressing down will grow the window’s height.
+	bindsym j resize shrink width 10 px or 10 ppt
+		bindsym k resize grow height 10 px or 10 ppt
+		bindsym l resize shrink height 10 px or 10 ppt
+		bindsym semicolon resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+# same bindings, but for the arrow keys
+		bindsym Left resize shrink width 10 px or 10 ppt
+		bindsym Down resize grow height 10 px or 10 ppt
+		bindsym Up resize shrink height 10 px or 10 ppt
+		bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
-} 
+# back to normal: Enter or Escape or $mod+r
+		bindsym Return mode "default"
+		bindsym Escape mode "default"
+		bindsym $mod+r mode "default"
+}
 
 bindsym $mod+r mode "resize"
 set $bg-color 	         #2f343f
@@ -199,11 +204,11 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3blocks
-	position top
-	colors{
-	background #0a0a0a00
-	}
+	status_command i3blocks
+		position top
+		colors{
+			background #0a0a0a00
+		}
 	i3bar_command i3bar -t
 }
 exec_always feh --bg-scale /home/hackuin/Pictures/time.jpg
