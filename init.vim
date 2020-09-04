@@ -53,6 +53,10 @@ imap jj <ESC> :w !python3 % <CR>
 imap ,, <C-[>
 imap <C-f> <ESC> <ESC> :BLines! <CR>
 map f <Plug>Sneak_s
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
 set noswapfile
 set hidden
 set guifont=DroidSansMono\ Nerd\ Font\ 11
