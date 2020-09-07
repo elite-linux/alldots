@@ -8,7 +8,7 @@ DATE=$(date):
 cp "$HOME/.config/i3/config" "$MAINDIR"
 cp "$HOME/.config/compton.conf" "$MAINDIR"
 cp "$HOME/.config/nvim/init.vim" "$MAINDIR"
-
+cp "$HOME/.zshrc" "$MAINDIR"
 
 cd "$MAINDIR" || echo "Cannot change directory..."
 echo "$PWD"
