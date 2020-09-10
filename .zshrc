@@ -71,7 +71,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git zsh-lazyload zsh-syntax-highlighting zsh-autosuggestions zsh-dircolors-solarized hacker-quotes)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -111,3 +111,4 @@ function se {
 function e { exit }
 neofetch
 source "$HOME/repos/zsh-vim-mode/zsh-vim-mode.plugin.zsh"
+alias ld="ls -d */"

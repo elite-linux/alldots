@@ -7,6 +7,8 @@ call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+Plug 'tpope/vim-fugitive'
+
 Plug 'sickill/vim-monokai'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'
@@ -63,6 +65,7 @@ set guifont=DroidSansMono\ Nerd\ Font\ 11
 " nnoremap <C-m> :bnext<CR>
 " nnoremap <C-p> :bprev<CR>
 colorscheme gruvbox
+let g:airline#extensions#branch#enabled = 1
 let g:sneak#label = 1
 let g:ale_python_flake8_options = '--ignore=E501'
 let g:ale_linters = {'python': ['flake8']}
